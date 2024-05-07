@@ -1,0 +1,22 @@
+{
+  "name": "marketing-backend",
+  "version": "1.0.0",
+  "description": "a website for markting ans grow a network",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "npm run dev",
+    "dev": "nodemon ./index.js"
+  },
+  "keywords": [
+    "javascript"
+  ],
+  "author": "gaurav ghuge",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "mongodb": "^6.6.1",
+    "mongoose": "^8.3.4",
+    "nodemon": "^3.1.0"
+  }
+}
