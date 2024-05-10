@@ -6,7 +6,17 @@ dotenv.config({
     path: "./.env"
 })
 
-const PORT = 3000 || process.env.PORT;
+const PORT = process.env.PORT || 3000 ;
+
+import Razorpay from 'razorpay';
+const instance = new Razorpay({
+    
+    key_id: process.env.RAZORPAY_KEY_ID,
+    key_secret: process.env.RAZORPAY_KEY_SECRET,
+    
+});
+
+
 
 
 connectDB()
@@ -24,3 +34,6 @@ connectDB()
 });
 
 
+export {
+    instance
+}

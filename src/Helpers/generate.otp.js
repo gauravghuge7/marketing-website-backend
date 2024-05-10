@@ -1,32 +1,53 @@
 
-function generateOtp () {
+// function generateOtp () {
 
-   return Math.floor(1000 + Math.random() * 9000);
+//    return Math.floor(1000 + Math.random() * 9000);
+// }
 
-}
-
-export default generateOtp;
-
+// import unirest from "unirest";
 
 
-var unirest = require("unirest");
+// function sendOtp (mobile) {
 
-var req = unirest("POST", "https://www.fast2sms.com/dev/bulkV2");
+//   const otp = generateOtp();
+//   console.log(otp);
 
-req.headers({
-  "authorization": "YOUR_API_KEY"
-});
+//   // var unirest = require("unirest");
+ 
 
-req.form({
-  "message": "This is a test message",
-  "language": "english",
-  "route": "q",
-  "numbers": "9999999999,8888888888,7777777777",
-});
+//   var req = unirest("POST", "https://www.fast2sms.com/dev/bulkV2");
 
-req.end(function (res) {
-  if (res.error) throw new Error(res.error);
+//   req.headers({
+//     "authorization": "kX8sBQdJA1MP2HYRCf4Da0c7tbgEqrmLU5FvuVOh3SzGw6xylTwXfNGQMCn63KSrayi5kUzEvbx9A4jI"
+//   });
 
-  console.log(res.body);
-});
+
+//   req.form({
+//     "variables_values": `${otp}`,
+//     "route": "otp",
+//     "numbers": `${mobile}`
+//   });
+
+
+//   req.end(function (res) {
+    
+//     if (res.error) throw new Error(res.error);
+
+//     console.log(res.body);
+//   });
+
+// }
+
+// sendOtp(8767482793);
+
+
+// export {
+//   generateOtp
+// }
+
+
+
+
+
+
 

@@ -12,7 +12,23 @@ const userSchema = new Schema({
         minLength: [10, 'mobile number must be 10 digits long'],
         maxLength: [10, 'mobile number only 10 digits long'],
 
-    }
+    },
+
+    ourReferralCode: {
+        type: String,
+        required: true,
+        trim: true,
+    },
+
+    acceptReferralCode: {
+        type: String,
+        required: true,
+        trim: true,
+    },
+    
+
+
+
 
 }, { timestamps: true });
 
